@@ -1,1 +1,2 @@
-/.idea
+# Ignore the entire .idea folder
+.idea/
