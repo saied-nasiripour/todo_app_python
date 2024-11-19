@@ -1,9 +1,8 @@
-from unittest import case
 
 todos = []
 
 while True:
-    user_action = input("Type add or Show, exit: ")
+    user_action = input("Type add or show, exit: ")
     user_action = user_action.strip()
 
     match user_action:
@@ -15,5 +14,7 @@ while True:
                 print(item)
         case 'exit':
             break
+        case _:
+            print("Hey, you entered an unknown command.")
 
 print("BYE!")
