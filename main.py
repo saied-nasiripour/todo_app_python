@@ -11,7 +11,7 @@ while True:
             todos.append(todo)
         case 'show':
             for item in todos: # iterate over the existing todos lists.
-                print(item)
+                print(str(todos.index(item) + 1) + ". " + item)
         case 'edit':
             number = int(input("Number of the todo to edit: "))
             number = number - 1
