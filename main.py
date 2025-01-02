@@ -1,14 +1,21 @@
 
-todos = []
-
 while True:
     user_action = input("Type add, show, edit, or exit: ")
     user_action = user_action.strip() # remove the whitespace from the user input.
 
     match user_action:
         case 'add':
-            todo = input("Enter a todo: ")
+            todo = input("Enter a todo: ") + "\n"
+
+            file = open("todos.txt", "r")
+            todos = file.readlines()
+            file.close()
+
             todos.append(todo)
+
+            file = open("todos.txt", "w")
+            file.writelines(todos)
+            file.close()
         case 'show':
             for index, item in enumerate(todos): # iterate over the existing todos lists.
                 row = f"{index + 1}. {item}"
